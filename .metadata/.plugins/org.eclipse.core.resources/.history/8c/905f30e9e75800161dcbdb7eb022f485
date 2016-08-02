@@ -1,0 +1,32 @@
+package main;
+
+import java.util.*;
+
+public class Solution {
+	
+	public static String removeChars(String str, String remove) {
+		StringBuilder s = new StringBuilder(str);
+		char[] r = remove.toCharArray();
+		Set<Character> set = new HashSet<Character>();
+		
+		for(int i = 0; i < r.length; i++) {
+			set.add(r[i]);
+		}
+		
+		for(int j = 0; j < s.length(); j++) {
+			if(set.contains(s.charAt(j))) {
+				s.deleteCharAt(j);
+			}
+		}
+		return s.toString();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scn = new Scanner(System.in);
+		String s = scn.nextLine();
+		String remove = scn.nextLine();
+		removeChars(s, remove);
+	}
+
+}
