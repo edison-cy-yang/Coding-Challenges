@@ -1,0 +1,15 @@
+package main;
+
+public class Solution {
+
+	public static String findFirstRepeated(String str) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "how are you I'm fine thank you";
+		System.out.println(findFirstRepeated(str));
+
+	}
+
+}

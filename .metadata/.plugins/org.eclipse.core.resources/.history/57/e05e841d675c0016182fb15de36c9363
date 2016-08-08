@@ -1,0 +1,48 @@
+package main;
+
+import java.util.*;
+
+public class Solution {
+
+	public static int countPalindromes(String str) {
+		Set<String> set = new HashSet<String>();
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		
+		for(int i = 0; i < str.length(); i++) {
+			String c = str.substring(i, i+1);
+			if(!map.containsKey(c))
+				map.put(c, 0);
+			int forward = i + 1;
+			int backward = i - 1;
+			while(forward < str.length() && backward >= 0) {
+				if(str.charAt(forward) == str.charAt(backward)) {
+					String temp = str.substring(backward, forward+1);
+					if(!map.containsKey(temp)) {
+						map.put(temp, 0);
+						forward++;
+						backward--;
+					}
+				}
+				else {
+					break;
+				}
+			}
+		}
+		Set set1 = map.keySet();
+		Iterator i = set1.iterator();
+		
+		while(i.hasNext()) {
+			Map.Entry en = (Map.Entry) i.next();
+			System.out.println(en.getKey());
+		}
+		
+		return map.size();
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "abaaa";
+		
+		System.out.println(countPalindromes(str));
+	}
+
+}

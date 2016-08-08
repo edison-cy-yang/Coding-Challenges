@@ -1,0 +1,18 @@
+package main;
+
+public class Solution {
+
+	public static String findFirstRepeated(String str) {
+		String[] strArr = str.split(" ");
+		HashSet<String> set = new HashSet<String>();
+		
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "how are you I'm fine thank you";
+		System.out.println(findFirstRepeated(str));
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package main;
+
+public class Solution {
+
+	public static int countPalindromes(String str) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "abaaa";
+		
+		System.out.println(countPalindromes(str));
+	}
+
+}

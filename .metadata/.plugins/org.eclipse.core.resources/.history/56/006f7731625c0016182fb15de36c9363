@@ -1,0 +1,19 @@
+package main;
+
+import java.util.*;
+
+public class Solution {
+
+	public static int countPalindromes(String str) {
+		HashSet<String> set = new HashSet<String>();
+		
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "abaaa";
+		
+		System.out.println(countPalindromes(str));
+	}
+
+}

@@ -1,0 +1,20 @@
+package main;
+
+public class Solution {
+	
+	public static int[] mergeArrays(int[] a, int[] b) {
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a = {1,3,4,6,9,11};
+		int[] b = {2,3,5,8,9,10,14};
+		int[] merged = mergeArray(a, b);
+		
+		for(int i = 0; i < merged.length; i++) {
+			System.out.print(merged[i] + " ");
+		}
+	}
+
+}

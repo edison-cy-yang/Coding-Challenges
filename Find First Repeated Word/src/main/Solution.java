@@ -1,0 +1,30 @@
+package main;
+
+import java.util.*;
+
+public class Solution {
+
+	public static String findFirstRepeated(String str) {
+		String[] strArr = str.split(" ");
+		HashSet<String> set = new HashSet<String>();
+		String repeated = null;
+		
+		for(int i = 0; i < strArr.length; i++) {
+			if(!set.contains(strArr[i])) {
+				set.add(strArr[i]);
+			}
+			else {
+				repeated = strArr[i];
+				break;
+			}
+		}
+		return repeated;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "how are you I'm fine thank you fine";
+		System.out.println(findFirstRepeated(str));
+
+	}
+
+}
